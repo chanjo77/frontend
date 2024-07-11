@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 페이지 스타일 */
+        body {
+            background-color: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+       
+        /* 사이트 스타일 */
+        #container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+       
+        /* 태그명과 클래스명 */
+        h1 {
+            color: #333;
+        }
+       
+        .highlight {
+            background-color: #ffffcc;
+        }
+       
+        /* Box Model */
+        .box {
+            width: 200px;
+            height: 150px;
+            padding: 20px;
+            border: 1px solid #333;
+            margin: 10px;
+        }
+       
+        /* Display 속성 */
+        .inline-box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #99ccff;
+            margin-right: 10px;
+        }
+       
+        /* ul로 가로 메뉴 만들기 */
+        .menu ul {
+            list-style: none;
+            display: flex;
+            background-color: #333;
+            padding: 0;
+        }
+       
+        .menu li {
+            margin-right: 10px;
+        }
+       
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+       
+        /* Overflow 속성과 Max Width 속성 */
+        .overflow-example {
+            width: 300px;
+            height: 150px;
+            border: 1px solid #333;
+            overflow: scroll;
+        }
+       
+        .max-width-example {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+       
+        /* 이미지 Max Width */
+        .image-example img {
+            max-width: 100%;
+            height: auto;
+        }
+       
+        /* Text Align과 가로 중앙 배치 */
+        .center-text {
+            text-align: center;
+        }
+       
+        /* Float 속성 */
+        .float-left {
+            float: left;
+            width: 50%;
+        }
+       
+        .float-right {
+            float: right;
+            width: 50%;
+        }
+       
+        /* Position 속성 */
+        .position-relative {
+            position: relative;
+            top: 20px;
+        }
+       
+        .position-absolute {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+       
+        .position-fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+       
+        .position-sticky {
+            position: sticky;
+            top: 50px;
+            background-color: #99ccff;
+            padding: 10px;
+        }
+       
+        /* 가상 클래스와 가상 요소 */
+        .hover-effect:hover {
+            background-color: #ff9999;
+        }
+       
+        .focus-effect:focus {
+            border: 2px solid #99ccff;
+        }
+       
+        .checked-effect:checked {
+            background-color: #66ff66;
+        }
+       
+        .first-child-effect:first-child {
+            font-weight: bold;
+        }
+       
+        .last-child-effect:last-child {
+            font-style: italic;
+        }
+       
+        .before-effect::before {
+            content: "앞에 추가됨: ";
+        }
+       
+        .after-effect::after {
+            content: "뒤에 추가됨!";
+        }
+    </style>
+    <title>CSS 예시 코드</title>
+</head>
+<body>
+    <div id="container">
+        <h1 class="highlight">CSS 예시 코드</h1>
+       
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+       
+        <div class="inline-box"></div>
+        <div class="inline-box"></div>
+        <div class="inline-box"></div>
+       
+        <div class="menu">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">서비스</a></li>
+                <li><a href="#">연락</a></li>
+            </ul>
+        </div>
+       
+        <div class="overflow-example">
+            <p>Overflow 속성을 사용한 스크롤 예시</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum velit eget libero.</p>
+        </div>
+       
+        <div class="max-width-example">
+            <p>Max Width 속성을 사용한 가로 중앙 정렬</p>
+        </div>
+       
+        <div class="image-example">
+            <img src="image.jpg" alt="이미지">
+        </div>
+       
+        <div class="center-text">
+            <p>Text Align 속성을 사용한 가로 중앙 정렬</p>
+        </div>
+       
+        <div class="float-left">
+            <p>Float 속성을 사용한 가로 배치</p>
+        </div>
+        <div class="float-right">
+            <p>Float 속성을 사용한 가로 배치</p>
+        </div>
+       
+        <div class="position-relative">
+            <p>Position 속성을 사용한 상대적인 위치 조정</p>
+        </div>
+       
+        <div class="position-absolute">
+            <p>Position: Absolute 속성을 사용한 절대 위치</p>
+        </div>
+       
+        <div class="position-fixed">
+            <p>Position: Fixed 속성을 사용한 화면에 고정된 위치</p>
+        </div>
+       
+        <div class="position-sticky">
+            <p>Position: Sticky 속성을 사용한 스크롤 시 상단에 고정</p>
+        </div>
+       
+        <div class="hover-effect">
+            <p>Hover 가상 클래스를 사용한 호버 효과</p>
+        </div>
+       
+        <input type="text" class="focus-effect" placeholder="Focus 시 효과">
+       
+        <input type="checkbox" class="checked-effect"> 체크된 경우 배경색 변경
+       
+        <p class="first-child-effect">첫 번째 요소</p>
+        <p>두 번째 요소</p>
+       
+        <p class="before-effect">가상 요소 사용 예시</p>
+       
+        <p class="after-effect">가상 요소 사용 예시</p>
+    </div>
+</body>
+</html>
