@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캐릭터 설정</title>
+  <link rel="stylesheet" href="character.css">
+</head>
+<body>
+  <header>
+    <h1>캐릭터 설정</h1>
+  </header>
+  <main class="character-form">
+    <form>
+      <div class="input-field">
+        <label for="charName">캐릭터 이름:</label>
+        <input type="text" id="charName" name="charName" placeholder="캐릭터 이름을 입력하세요">
+      </div>
+
+      <div class="input-field">
+        <label for="charAge">캐릭터 나이:</label>
+        <input type="number" id="charAge" name="charAge" min="0" max="999" placeholder="나이를 입력하세요">
+      </div>
+
+      <div class="input-field">
+        <label for="charGender">캐릭터 성별:</label>
+        <select id="charGender" name="charGender">
+          <option value="male">남성</option>
+          <option value="female">여성</option>
+          <option value="other">기타</option>
+        </select>
+      </div>
+
+      <div class="input-field">
+        <label for="charDescription">캐릭터 설명:</label>
+        <textarea id="charDescription" name="charDescription" placeholder="캐릭터에 대한 설명을 입력하세요"></textarea>
+      </div>
+
+      <button type="submit">저장</button>
+    </form>
+  </main>
+</body>
+</html>
